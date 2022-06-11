@@ -122,8 +122,8 @@ def show_venue(venue_id):
     
     return render_template('pages/show_venue.html', venue=venue_data)
   except:
-    flash(f'The venue {venue_id} does not exit')
-    return render_template('pages/show_venue.html')
+    flash(f'The venue {venue.name} does not exit')
+    return render_template('pages/home.html')
 
 #  Create Venue
 #  ----------------------------------------------------------------
