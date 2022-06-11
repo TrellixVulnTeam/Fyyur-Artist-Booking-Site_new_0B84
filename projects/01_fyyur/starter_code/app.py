@@ -20,10 +20,11 @@ from models import Venue, Artist, Show, db
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
+moment = Moment(app)
 app.config.from_object('config')
 db.init_app(app)
 migrate = Migrate(app, db)
-moment = Moment(app)
+
 
 # TODO: connect to a local postgresql database
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:presidenT98!@localhost:5432/postgres'
